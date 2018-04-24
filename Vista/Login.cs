@@ -9,9 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Controller;
 
+
 namespace Vista
 {
-    public partial class Login : Form
+    public partial class Login : System.Windows.Forms.Form
     {
         public Login()
         {
@@ -30,18 +31,23 @@ namespace Vista
             bool consultaExitosa = loginController.GetLogin(usuario,contrasena);
             if (consultaExitosa)
             {
+                this.Hide();
+                HomeView homeView = new HomeView();
+                homeView.Show();
                 
             }
             else
             {
                 lblError.Text = loginController.Error;
+                txbUsuarioByLogin.Text = "";
+                txbContrasenaByLogin.Text = "";
             }
 
         }
-        public void mtError()
-        {
-            MessageBox.Show("Error");
-        }
+        //public void mtError()
+        //{
+        //    MessageBox.Show("Error");
+        //}
     
     }
 }

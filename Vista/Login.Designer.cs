@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.lblUsuarioByLogin = new System.Windows.Forms.Label();
             this.lblContrasenaByLogin = new System.Windows.Forms.Label();
             this.txbUsuarioByLogin = new System.Windows.Forms.TextBox();
@@ -82,7 +83,7 @@
             // lblError
             // 
             this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(31, 185);
+            this.lblError.Location = new System.Drawing.Point(103, 185);
             this.lblError.Name = "lblError";
             this.lblError.Size = new System.Drawing.Size(0, 13);
             this.lblError.TabIndex = 3;
@@ -98,6 +99,7 @@
             this.Controls.Add(this.txbUsuarioByLogin);
             this.Controls.Add(this.lblContrasenaByLogin);
             this.Controls.Add(this.lblUsuarioByLogin);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";

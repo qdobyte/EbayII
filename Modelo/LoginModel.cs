@@ -39,7 +39,7 @@ namespace Model
                 }
                 else
                 {
-                    this.Error = "Error";
+                    this.Error = "Usuario o Contraseña incorrecta";
                     return false;
                 }
             }

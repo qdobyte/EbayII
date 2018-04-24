@@ -21,7 +21,7 @@ namespace Controller
         LoginModel loginModel = null;
         public LoginController()
         {
-            loginModel = new LoginModel();//Esto es una prueba
+            loginModel = new LoginModel();
         }
         public bool GetLogin(string usuario, string contrasena)
         {
