@@ -30,7 +30,7 @@ namespace Model
         public bool SetForm(string vehiculo, string marca, string linea, string modelo, string placa,
             string kilometraje, string motor, string ciudad, string precio)
         {
-            bool registroExitoso = 
+            bool registroExitoso = fgdfrtgrttgretet
         }
     }
 
