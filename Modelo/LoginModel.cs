@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 
-
 namespace Model
 {
     public class LoginModel
@@ -17,21 +16,21 @@ namespace Model
         public string Usuario { get; set; }
         public string Contrasena { get; set; }
         public string Error { get; set; }
-
-        ConexionSQL ConexionSQL = null;
         #endregion
+
+        ConexionSQL conexionSQL = null;
         public LoginModel()
         {
-            ConexionSQL = new ConexionSQL();
+            conexionSQL = new ConexionSQL();
         }
         public bool GetLogin(string usuario, string contrasena)
         {
-            bool consultaExitosa = ConexionSQL.GetLogin(usuario, contrasena);
+            bool consultaExitosa = conexionSQL.GetLogin(usuario, contrasena);
             if (consultaExitosa)
             {
-                if (ConexionSQL.data.Rows.Count > 0)
+                if (conexionSQL.data.Rows.Count > 0)
                 {
-                    foreach (DataRow row in ConexionSQL.data.Rows)
+                    foreach (DataRow row in conexionSQL.data.Rows)
                     {
                         this.Nombre = row["nombre"].ToString();
                     }
@@ -45,7 +44,7 @@ namespace Model
             }
             else
             {
-                this.Error = ConexionSQL.ErrorMessage;
+                this.Error = conexionSQL.ErrorMessage;
                 return false;
             }
         }

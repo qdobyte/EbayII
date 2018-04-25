@@ -18,6 +18,7 @@ namespace Controller
         public string Error { get; set; }
 
         #endregion
+
         LoginModel loginModel = null;
         public LoginController()
         {

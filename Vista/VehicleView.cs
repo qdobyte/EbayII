@@ -12,11 +12,13 @@ using Controller;
 
 namespace Vista
 {
-    public partial class Form : System.Windows.Forms.Form
+    public partial class VehicleView : System.Windows.Forms.Form
     {
-        public Form()
+        public VehicleView()
         {
             InitializeComponent();
+            VehicleController vehicleController = new VehicleController();
+            this.txbVendedor.Text = vehicleController.NombreVendedor;
             this.cbxTipoVehiculo.Items.AddRange(new object[] 
             {"Automovil","Motocicleta"});
             this.cbxLinea.Items.AddRange(new object[] { "Particular", "Comercial" });
@@ -31,11 +33,10 @@ namespace Vista
         {
             try
             {
-                string url;
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    url = openFileDialog1.FileName;
-                    pictureBox1.Image = Image.FromFile(url);
+                    txbUrl.Text = openFileDialog1.FileName;
+                    pictureBox1.Image = Image.FromFile(openFileDialog1.FileName);
                 }
             }
             catch (Exception ex)
@@ -46,10 +47,11 @@ namespace Vista
         private void txbVendedor_TextChanged(object sender, EventArgs e)
         {
             //txbVendedor.Text = ???? 
+            
         }
         private void btnPublicar_Click(object sender, EventArgs e)
         {
-            FormController formController = new FormController();
+            VehicleController formController = new VehicleController();
 
             string vehiculo = null;
             string marca = null;
@@ -75,7 +77,6 @@ namespace Vista
             precio = txbPrecio.Text;
             descripcion = txbDescripcion.Text;
             url = txbUrl.Text;
-
 
             bool registroExitoso = formController.SetForm(vehiculo, marca, linea, modelo, placa, 
                 kilometraje, motor, ciudad, precio, url, descripcion);

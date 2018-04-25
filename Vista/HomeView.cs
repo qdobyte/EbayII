@@ -25,7 +25,7 @@ namespace Vista
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form();
+            VehicleView formulario = new VehicleView();
             formulario.Show();
         }
     }

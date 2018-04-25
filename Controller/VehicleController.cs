@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
+using Model;
 
-namespace Model
+namespace Controller
 {
-    public class FormModel
+    public class VehicleController
     {
         #region attributes
         public string Vehiculo { get; set; }
@@ -19,19 +19,21 @@ namespace Model
         public string Motor { get; set; }
         public string Ciudad { get; set; }
         public string Precio { get; set; }
+        public string Descripcion { get; set; }
         public string Url { get; set; }
         public string Mensaje { get; set; }
-
-        ConexionSQL conexionSQL = null;
+        public string NombreVendedor { get; set; }
         #endregion
-        public FormModel()
+        VehicleModel VehicleModel = null;
+        public VehicleController()
         {
-            conexionSQL = new ConexionSQL();
+            VehicleModel = new VehicleModel();
+            this.NombreVendedor = this.GetNombreVendedor();
         }
         public bool SetForm(string vehiculo, string marca, string linea, string modelo, string placa,
-            string kilometraje, string motor, string ciudad, string precio, string url, string descripcion)
+            string kilometraje, string motor, string ciudad, string precio,string url, string descripcion)
         {
-            bool registroExitoso = conexionSQL.SetForm(vehiculo, marca, linea, modelo, placa, kilometraje, motor, ciudad, precio, url, descripcion);
+            bool registroExitoso = VehicleModel.SetForm(vehiculo, marca, linea, modelo, placa, kilometraje, motor, ciudad, precio, url, descripcion);
             if (registroExitoso)
             {
                 Mensaje = "Registro Exitoso";
@@ -39,10 +41,15 @@ namespace Model
             }
             else
             {
-                Mensaje = conexionSQL.ErrorMessage;
+                this.Mensaje = VehicleModel.Mensaje;
                 return false;
             }
+            
+        }
+        private string GetNombreVendedor()
+        {
+            LoginModel loginModel = new LoginModel();
+            return loginModel.Nombre;
         }
     }
-
 }
