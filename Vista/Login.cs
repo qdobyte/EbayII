@@ -44,10 +44,6 @@ namespace Vista
             }
 
         }
-        //public void mtError()
-        //{
-        //    MessageBox.Show("Error");
-        //}
     
     }
 }

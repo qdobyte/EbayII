@@ -56,6 +56,7 @@
             this.txbMotor = new System.Windows.Forms.TextBox();
             this.lblDescripcion = new System.Windows.Forms.Label();
             this.txbDescripcion = new System.Windows.Forms.TextBox();
+            this.txbUrl = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -103,7 +104,6 @@
             this.lblPrecio.Size = new System.Drawing.Size(37, 13);
             this.lblPrecio.TabIndex = 8;
             this.lblPrecio.Text = "Precio";
-            this.lblPrecio.Click += new System.EventHandler(this.label5_Click);
             // 
             // lblMotor
             // 
@@ -143,7 +143,7 @@
             // 
             // btnPublicar
             // 
-            this.btnPublicar.Location = new System.Drawing.Point(147, 568);
+            this.btnPublicar.Location = new System.Drawing.Point(129, 605);
             this.btnPublicar.Name = "btnPublicar";
             this.btnPublicar.Size = new System.Drawing.Size(75, 23);
             this.btnPublicar.TabIndex = 12;
@@ -159,7 +159,6 @@
             this.lblEncabezado.Size = new System.Drawing.Size(110, 13);
             this.lblEncabezado.TabIndex = 10;
             this.lblEncabezado.Text = "Registro de Vehiculos";
-            this.lblEncabezado.Click += new System.EventHandler(this.lblEncabezado_Click);
             // 
             // txbMarca
             // 
@@ -182,7 +181,6 @@
             this.txbPlaca.Name = "txbPlaca";
             this.txbPlaca.Size = new System.Drawing.Size(166, 20);
             this.txbPlaca.TabIndex = 4;
-            this.txbPlaca.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPlaca_KeyPress);
             // 
             // txbModelo
             // 
@@ -190,7 +188,6 @@
             this.txbModelo.Name = "txbModelo";
             this.txbModelo.Size = new System.Drawing.Size(166, 20);
             this.txbModelo.TabIndex = 3;
-            this.txbModelo.TextChanged += new System.EventHandler(this.txbModelo_TextChanged);
             this.txbModelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbModelo_KeyPress);
             // 
             // txbPrecio
@@ -199,13 +196,12 @@
             this.txbPrecio.Name = "txbPrecio";
             this.txbPrecio.Size = new System.Drawing.Size(166, 20);
             this.txbPrecio.TabIndex = 8;
-            this.txbPrecio.TextChanged += new System.EventHandler(this.txbPrecio_TextChanged);
             this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPrecio_KeyPress);
             // 
             // pictureBox1
             // 
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(38, 397);
+            this.pictureBox1.Location = new System.Drawing.Point(38, 407);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(275, 164);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -214,7 +210,7 @@
             // 
             // btbSubirImagen
             // 
-            this.btbSubirImagen.Location = new System.Drawing.Point(314, 538);
+            this.btbSubirImagen.Location = new System.Drawing.Point(319, 548);
             this.btbSubirImagen.Name = "btbSubirImagen";
             this.btbSubirImagen.Size = new System.Drawing.Size(30, 23);
             this.btbSubirImagen.TabIndex = 11;
@@ -250,7 +246,6 @@
             this.cbxTipoVehiculo.Name = "cbxTipoVehiculo";
             this.cbxTipoVehiculo.Size = new System.Drawing.Size(166, 21);
             this.cbxTipoVehiculo.TabIndex = 0;
-            this.cbxTipoVehiculo.SelectedIndexChanged += new System.EventHandler(this.cbxTipoVehiculo_SelectedIndexChanged);
             // 
             // cbxLinea
             // 
@@ -292,11 +287,19 @@
             this.txbDescripcion.Size = new System.Drawing.Size(166, 83);
             this.txbDescripcion.TabIndex = 10;
             // 
+            // txbUrl
+            // 
+            this.txbUrl.Location = new System.Drawing.Point(38, 578);
+            this.txbUrl.Name = "txbUrl";
+            this.txbUrl.Size = new System.Drawing.Size(275, 20);
+            this.txbUrl.TabIndex = 17;
+            // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 599);
+            this.ClientSize = new System.Drawing.Size(356, 640);
+            this.Controls.Add(this.txbUrl);
             this.Controls.Add(this.txbDescripcion);
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.txbMotor);
@@ -363,5 +366,6 @@
         public System.Windows.Forms.TextBox txbMotor;
         private System.Windows.Forms.Label lblDescripcion;
         public System.Windows.Forms.TextBox txbDescripcion;
+        private System.Windows.Forms.TextBox txbUrl;
     }
 }

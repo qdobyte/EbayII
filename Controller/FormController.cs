@@ -19,8 +19,29 @@ namespace Controller
         public string Motor { get; set; }
         public string Ciudad { get; set; }
         public string Precio { get; set; }
-        public string Vendedor { get; set; }
-        public string Error { get; set; }
+        public string Descripcion { get; set; }
+        public string Url { get; set; }
+        public string Mensaje { get; set; }
         #endregion
+        FormModel formModel = null;
+        public FormController()
+        {
+            formModel = new FormModel();
+        }
+        public bool SetForm(string vehiculo, string marca, string linea, string modelo, string placa,
+            string kilometraje, string motor, string ciudad, string precio,string url, string descripcion)
+        {
+            bool registroExitoso = formModel.SetForm(vehiculo, marca, linea, modelo, placa, kilometraje, motor, ciudad, precio, url, descripcion);
+            if (registroExitoso)
+            {
+                Mensaje = "Registro Exitoso";
+                return true;
+            }
+            else
+            {
+                this.Mensaje = formModel.Mensaje;
+                return false;
+            }
+        }
     }
 }
