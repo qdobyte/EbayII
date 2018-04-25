@@ -25,10 +25,12 @@ namespace Controller
         public string NombreVendedor { get; set; }
         #endregion
         VehicleModel VehicleModel = null;
+        Tu Puta Madre 
         public VehicleController()
         {
             VehicleModel = new VehicleModel();
             this.NombreVendedor = this.GetNombreVendedor();
+            Tu otra puta madre
         }
         public bool SetForm(string vehiculo, string marca, string linea, string modelo, string placa,
             string kilometraje, string motor, string ciudad, string precio,string url, string descripcion)
