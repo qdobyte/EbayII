@@ -143,7 +143,7 @@
             // 
             // btnPublicar
             // 
-            this.btnPublicar.Location = new System.Drawing.Point(129, 605);
+            this.btnPublicar.Location = new System.Drawing.Point(147, 604);
             this.btnPublicar.Name = "btnPublicar";
             this.btnPublicar.Size = new System.Drawing.Size(75, 23);
             this.btnPublicar.TabIndex = 12;
@@ -293,8 +293,9 @@
             this.txbUrl.Name = "txbUrl";
             this.txbUrl.Size = new System.Drawing.Size(275, 20);
             this.txbUrl.TabIndex = 17;
+            this.txbUrl.Visible = false;
             // 
-            // Form
+            // VehicleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -327,7 +328,7 @@
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblTipoVehiculo);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Form";
+            this.Name = "VehicleView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario";
             this.Load += new System.EventHandler(this.Formulario_Load);

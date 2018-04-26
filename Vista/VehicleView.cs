@@ -23,6 +23,7 @@ namespace Vista
             {"Automovil","Motocicleta"});
             this.cbxLinea.Items.AddRange(new object[] { "Particular", "Comercial" });
             this.cbxCiudad.Items.AddRange(new object[] { "Medellín", "Bogotá", "Cali", "Pereira" });
+            //this.txbVendedor.Text = 
         }
         private void Formulario_Load(object sender, EventArgs e)
         {
@@ -51,7 +52,7 @@ namespace Vista
         }
         private void btnPublicar_Click(object sender, EventArgs e)
         {
-            VehicleController formController = new VehicleController();
+            VehicleController vehicleController = new VehicleController();
 
             string vehiculo = null;
             string marca = null;
@@ -77,18 +78,18 @@ namespace Vista
             precio = txbPrecio.Text;
             descripcion = txbDescripcion.Text;
             url = txbUrl.Text;
+            vehicleController.NombreVendedor = txbVendedor.Text;
 
-            bool registroExitoso = formController.SetForm(vehiculo, marca, linea, modelo, placa, 
+            bool registroExitoso = vehicleController.SetForm(vehiculo, marca, linea, modelo, placa, 
                 kilometraje, motor, ciudad, precio, url, descripcion);
             if (registroExitoso)
             {
-                MessageBox.Show(formController.Mensaje);
+                MessageBox.Show(vehicleController.Mensaje);
                 this.Close();
             }
             else
             {
-                Error = formController.Mensaje;
-                
+                Error = vehicleController.Mensaje;
             }
         }
         private void txbPrecio_KeyPress(object sender, KeyPressEventArgs e)

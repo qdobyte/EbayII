@@ -34,7 +34,6 @@ namespace Vista
                 this.Hide();
                 HomeView homeView = new HomeView();
                 homeView.Show();
-                
             }
             else
             {
