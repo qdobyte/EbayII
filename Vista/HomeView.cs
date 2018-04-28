@@ -28,5 +28,6 @@ namespace Vista
             VehicleView formulario = new VehicleView();
             formulario.Show();
         }
+      
     }
 }

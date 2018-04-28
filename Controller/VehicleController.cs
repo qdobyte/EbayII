@@ -31,9 +31,9 @@ namespace Controller
             this.NombreVendedor = this.GetNombreVendedor();
         }
         public bool SetForm(string vehiculo, string marca, string linea, string modelo, string placa,
-            string kilometraje, string motor, string ciudad, string precio,string url, string descripcion)
+            string kilometraje, string motor, string ciudad, string precio,string url, string descripcion, int id_usuario)
         {
-            bool registroExitoso = VehicleModel.SetForm(vehiculo, marca, linea, modelo, placa, kilometraje, motor, ciudad, precio, url, descripcion);
+            bool registroExitoso = VehicleModel.CreateVehicle(vehiculo, marca, linea, modelo, placa, kilometraje, motor, ciudad, precio, url, descripcion,id_usuario);
             if (registroExitoso)
             {
                 Mensaje = "Registro Exitoso";
@@ -44,7 +44,6 @@ namespace Controller
                 this.Mensaje = VehicleModel.Mensaje;
                 return false;
             }
-            
         }
         private string GetNombreVendedor()
         {

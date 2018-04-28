@@ -26,7 +26,7 @@ namespace Controller
         }
         public bool GetLogin(string usuario, string contrasena)
         {
-            bool consultaExitosa = loginModel.GetLogin(usuario, contrasena);
+            bool consultaExitosa = loginModel.Login(usuario, contrasena);
             if (consultaExitosa)
             {
                 this.Nombre = loginModel.Nombre;

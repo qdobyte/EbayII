@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Model
 {
@@ -21,17 +22,39 @@ namespace Model
         public string Precio { get; set; }
         public string Url { get; set; }
         public string Mensaje { get; set; }
+        public int Id_Usuario { get; set; }
 
         ConexionSQL conexionSQL = null;
+        private SqlCommand sqlCommand;
         #endregion
+        #region Constructor
         public VehicleModel()
         {
             conexionSQL = new ConexionSQL();
+            this.sqlCommand = new SqlCommand();
         }
-        public bool SetForm(string vehiculo, string marca, string linea, string modelo, string placa,
-            string kilometraje, string motor, string ciudad, string precio, string url, string descripcion)
+        #endregion
+        #region  Create Vehicle
+        public bool CreateVehicle(string vehiculo, string marca, string linea, string modelo, string placa,
+            string kilometraje, string motor, string ciudad, string precio, string url, string descripcion, int id_usuario)
         {
-            bool registroExitoso = conexionSQL.SetForm(vehiculo, marca, linea, modelo, placa, kilometraje, motor, ciudad, precio, url, descripcion);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = "IngresarVehiculos";
+            sqlCommand.Parameters.AddWithValue("@Vehiculo", vehiculo);
+            sqlCommand.Parameters.AddWithValue("@Marca", marca);
+            sqlCommand.Parameters.AddWithValue("@Linea", linea);
+            sqlCommand.Parameters.AddWithValue("@Modelo", marca);
+            sqlCommand.Parameters.AddWithValue("@Placa", placa);
+            sqlCommand.Parameters.AddWithValue("@Kilometraje", kilometraje);
+            sqlCommand.Parameters.AddWithValue("@Motor", motor);
+            sqlCommand.Parameters.AddWithValue("@Ciudad", ciudad);
+            sqlCommand.Parameters.AddWithValue("@Precio", precio);
+            sqlCommand.Parameters.AddWithValue("@Url", url);
+            sqlCommand.Parameters.AddWithValue("@Descripcion", descripcion);
+            sqlCommand.Parameters.AddWithValue("@Id_Usuario", id_usuario);
+
+            bool registroExitoso = conexionSQL.ExecuteStoreProcedure(sqlCommand);
+
             if (registroExitoso)
             {
                 Mensaje = "Registro Exitoso";
@@ -43,6 +66,7 @@ namespace Model
                 return false;
             }
         }
+        #endregion
     }
 
 }

@@ -81,7 +81,7 @@ namespace Vista
             vehicleController.NombreVendedor = txbVendedor.Text;
 
             bool registroExitoso = vehicleController.SetForm(vehiculo, marca, linea, modelo, placa, 
-                kilometraje, motor, ciudad, precio, url, descripcion);
+                kilometraje, motor, ciudad, precio, url, descripcion, 1);
             if (registroExitoso)
             {
                 MessageBox.Show(vehicleController.Mensaje);

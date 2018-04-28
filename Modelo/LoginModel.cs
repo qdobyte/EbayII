@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
+using System.Data.SqlClient;
 
 namespace Model
 {
@@ -16,16 +17,24 @@ namespace Model
         public string Usuario { get; set; }
         public string Contrasena { get; set; }
         public string Error { get; set; }
+        SqlCommand sqlCommand = null;
         #endregion
 
         ConexionSQL conexionSQL = null;
         public LoginModel()
         {
             conexionSQL = new ConexionSQL();
+            this.sqlCommand = new SqlCommand();
         }
-        public bool GetLogin(string usuario, string contrasena)
+        public bool Login(string usuario, string contrasena)
         {
-            bool consultaExitosa = conexionSQL.GetLogin(usuario, contrasena);
+            sqlCommand.CommandType = CommandType.StoredProcedure;
+            sqlCommand.CommandText = "validarUsuario";
+            sqlCommand.Parameters.AddWithValue("@usuario", usuario);
+            sqlCommand.Parameters.AddWithValue("@contrasena", contrasena);
+
+            bool consultaExitosa = conexionSQL.ExecuteStoreProcedure(sqlCommand);
+            sqlCommand = null;
             if (consultaExitosa)
             {
                 if (conexionSQL.data.Rows.Count > 0)
