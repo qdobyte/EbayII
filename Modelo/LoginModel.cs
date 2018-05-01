@@ -19,13 +19,15 @@ namespace Model
         public string Error { get; set; }
         SqlCommand sqlCommand = null;
         #endregion
-
+        #region Constructor
         ConexionSQL conexionSQL = null;
         public LoginModel()
         {
             conexionSQL = new ConexionSQL();
             this.sqlCommand = new SqlCommand();
         }
+        #endregion
+        #region Login
         public bool Login(string usuario, string contrasena)
         {
             sqlCommand.CommandType = CommandType.StoredProcedure;
@@ -57,6 +59,6 @@ namespace Model
                 return false;
             }
         }
+        #endregion
     }
-
 }

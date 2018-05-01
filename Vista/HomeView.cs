@@ -12,6 +12,7 @@ namespace Vista
 {
     public partial class HomeView : System.Windows.Forms.Form
     {
+        public string UserName { get; set; }
         public HomeView()
         {
             InitializeComponent();
@@ -25,9 +26,15 @@ namespace Vista
 
         private void btnVender_Click(object sender, EventArgs e)
         {
-            VehicleView formulario = new VehicleView();
-            formulario.Show();
+            VehicleView vehicleView = new VehicleView(this, this.UserName);
+            vehicleView.Show();
+            vehicleView = null;
+            this.Hide();
         }
-      
+
+        public void Reload() {
+            this.Show();
+            //Recargue en la base de datos
+        }
     }
 }

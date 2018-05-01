@@ -33,6 +33,7 @@ namespace Vista
             {
                 this.Hide();
                 HomeView homeView = new HomeView();
+                homeView.UserName = loginController.Nombre;
                 homeView.Show();
             }
             else
@@ -43,6 +44,10 @@ namespace Vista
             }
 
         }
-    
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

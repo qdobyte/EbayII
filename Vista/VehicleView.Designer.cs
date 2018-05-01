@@ -29,344 +29,409 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VehicleView));
-            this.lblTipoVehiculo = new System.Windows.Forms.Label();
-            this.lblMarca = new System.Windows.Forms.Label();
-            this.lblLinea = new System.Windows.Forms.Label();
-            this.lblModelo = new System.Windows.Forms.Label();
-            this.lblPrecio = new System.Windows.Forms.Label();
-            this.lblMotor = new System.Windows.Forms.Label();
-            this.lblKilometraje = new System.Windows.Forms.Label();
-            this.lblPlaca = new System.Windows.Forms.Label();
-            this.lblCiudad = new System.Windows.Forms.Label();
-            this.btnPublicar = new System.Windows.Forms.Button();
-            this.lblEncabezado = new System.Windows.Forms.Label();
-            this.txbMarca = new System.Windows.Forms.TextBox();
-            this.txbKilometraje = new System.Windows.Forms.TextBox();
-            this.txbPlaca = new System.Windows.Forms.TextBox();
-            this.txbModelo = new System.Windows.Forms.TextBox();
-            this.txbPrecio = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btbSubirImagen = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.lblVendedor = new System.Windows.Forms.Label();
-            this.txbVendedor = new System.Windows.Forms.TextBox();
-            this.cbxTipoVehiculo = new System.Windows.Forms.ComboBox();
-            this.cbxLinea = new System.Windows.Forms.ComboBox();
-            this.cbxCiudad = new System.Windows.Forms.ComboBox();
-            this.txbMotor = new System.Windows.Forms.TextBox();
-            this.lblDescripcion = new System.Windows.Forms.Label();
-            this.txbDescripcion = new System.Windows.Forms.TextBox();
             this.txbUrl = new System.Windows.Forms.TextBox();
+            this.lblEncabezado = new System.Windows.Forms.Label();
+            this.txtTipoVehiculo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtLinea = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPlaca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCilindraje = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtMarca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtModelo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtKilometraje = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtCiudad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtVendedor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPrecio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btbSubirImagen = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPublicar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtAccesorios = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblTipoVehiculo
-            // 
-            this.lblTipoVehiculo.AutoSize = true;
-            this.lblTipoVehiculo.Location = new System.Drawing.Point(35, 55);
-            this.lblTipoVehiculo.Name = "lblTipoVehiculo";
-            this.lblTipoVehiculo.Size = new System.Drawing.Size(87, 13);
-            this.lblTipoVehiculo.TabIndex = 0;
-            this.lblTipoVehiculo.Text = "Tipo de Vehiculo";
-            // 
-            // lblMarca
-            // 
-            this.lblMarca.AutoSize = true;
-            this.lblMarca.Location = new System.Drawing.Point(35, 81);
-            this.lblMarca.Name = "lblMarca";
-            this.lblMarca.Size = new System.Drawing.Size(37, 13);
-            this.lblMarca.TabIndex = 1;
-            this.lblMarca.Text = "Marca";
-            // 
-            // lblLinea
-            // 
-            this.lblLinea.AutoSize = true;
-            this.lblLinea.Location = new System.Drawing.Point(35, 107);
-            this.lblLinea.Name = "lblLinea";
-            this.lblLinea.Size = new System.Drawing.Size(33, 13);
-            this.lblLinea.TabIndex = 2;
-            this.lblLinea.Text = "Linea";
-            // 
-            // lblModelo
-            // 
-            this.lblModelo.AutoSize = true;
-            this.lblModelo.Location = new System.Drawing.Point(35, 133);
-            this.lblModelo.Name = "lblModelo";
-            this.lblModelo.Size = new System.Drawing.Size(42, 13);
-            this.lblModelo.TabIndex = 3;
-            this.lblModelo.Text = "Modelo";
-            // 
-            // lblPrecio
-            // 
-            this.lblPrecio.AutoSize = true;
-            this.lblPrecio.Location = new System.Drawing.Point(35, 263);
-            this.lblPrecio.Name = "lblPrecio";
-            this.lblPrecio.Size = new System.Drawing.Size(37, 13);
-            this.lblPrecio.TabIndex = 8;
-            this.lblPrecio.Text = "Precio";
-            // 
-            // lblMotor
-            // 
-            this.lblMotor.AutoSize = true;
-            this.lblMotor.Location = new System.Drawing.Point(35, 211);
-            this.lblMotor.Name = "lblMotor";
-            this.lblMotor.Size = new System.Drawing.Size(34, 13);
-            this.lblMotor.TabIndex = 6;
-            this.lblMotor.Text = "Motor";
-            // 
-            // lblKilometraje
-            // 
-            this.lblKilometraje.AutoSize = true;
-            this.lblKilometraje.Location = new System.Drawing.Point(35, 185);
-            this.lblKilometraje.Name = "lblKilometraje";
-            this.lblKilometraje.Size = new System.Drawing.Size(58, 13);
-            this.lblKilometraje.TabIndex = 5;
-            this.lblKilometraje.Text = "Kilometraje";
-            // 
-            // lblPlaca
-            // 
-            this.lblPlaca.AutoSize = true;
-            this.lblPlaca.Location = new System.Drawing.Point(35, 159);
-            this.lblPlaca.Name = "lblPlaca";
-            this.lblPlaca.Size = new System.Drawing.Size(34, 13);
-            this.lblPlaca.TabIndex = 4;
-            this.lblPlaca.Text = "Placa";
-            // 
-            // lblCiudad
-            // 
-            this.lblCiudad.AutoSize = true;
-            this.lblCiudad.Location = new System.Drawing.Point(35, 237);
-            this.lblCiudad.Name = "lblCiudad";
-            this.lblCiudad.Size = new System.Drawing.Size(40, 13);
-            this.lblCiudad.TabIndex = 7;
-            this.lblCiudad.Text = "Ciudad";
-            // 
-            // btnPublicar
-            // 
-            this.btnPublicar.Location = new System.Drawing.Point(147, 604);
-            this.btnPublicar.Name = "btnPublicar";
-            this.btnPublicar.Size = new System.Drawing.Size(75, 23);
-            this.btnPublicar.TabIndex = 12;
-            this.btnPublicar.Text = "Publicar";
-            this.btnPublicar.UseVisualStyleBackColor = true;
-            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
-            // 
-            // lblEncabezado
-            // 
-            this.lblEncabezado.AutoSize = true;
-            this.lblEncabezado.Location = new System.Drawing.Point(116, 12);
-            this.lblEncabezado.Name = "lblEncabezado";
-            this.lblEncabezado.Size = new System.Drawing.Size(110, 13);
-            this.lblEncabezado.TabIndex = 10;
-            this.lblEncabezado.Text = "Registro de Vehiculos";
-            // 
-            // txbMarca
-            // 
-            this.txbMarca.Location = new System.Drawing.Point(147, 74);
-            this.txbMarca.Name = "txbMarca";
-            this.txbMarca.Size = new System.Drawing.Size(166, 20);
-            this.txbMarca.TabIndex = 1;
-            // 
-            // txbKilometraje
-            // 
-            this.txbKilometraje.Location = new System.Drawing.Point(147, 178);
-            this.txbKilometraje.Name = "txbKilometraje";
-            this.txbKilometraje.Size = new System.Drawing.Size(166, 20);
-            this.txbKilometraje.TabIndex = 5;
-            this.txbKilometraje.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbKilometraje_KeyPress);
-            // 
-            // txbPlaca
-            // 
-            this.txbPlaca.Location = new System.Drawing.Point(147, 152);
-            this.txbPlaca.Name = "txbPlaca";
-            this.txbPlaca.Size = new System.Drawing.Size(166, 20);
-            this.txbPlaca.TabIndex = 4;
-            // 
-            // txbModelo
-            // 
-            this.txbModelo.Location = new System.Drawing.Point(147, 126);
-            this.txbModelo.Name = "txbModelo";
-            this.txbModelo.Size = new System.Drawing.Size(166, 20);
-            this.txbModelo.TabIndex = 3;
-            this.txbModelo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbModelo_KeyPress);
-            // 
-            // txbPrecio
-            // 
-            this.txbPrecio.Location = new System.Drawing.Point(147, 256);
-            this.txbPrecio.Name = "txbPrecio";
-            this.txbPrecio.Size = new System.Drawing.Size(166, 20);
-            this.txbPrecio.TabIndex = 8;
-            this.txbPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txbPrecio_KeyPress);
             // 
             // pictureBox1
             // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pictureBox1.ImageLocation = "";
-            this.pictureBox1.Location = new System.Drawing.Point(38, 407);
+            this.pictureBox1.Location = new System.Drawing.Point(401, 87);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(275, 164);
+            this.pictureBox1.Size = new System.Drawing.Size(380, 303);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
-            // 
-            // btbSubirImagen
-            // 
-            this.btbSubirImagen.Location = new System.Drawing.Point(319, 548);
-            this.btbSubirImagen.Name = "btbSubirImagen";
-            this.btbSubirImagen.Size = new System.Drawing.Size(30, 23);
-            this.btbSubirImagen.TabIndex = 11;
-            this.btbSubirImagen.Text = "...";
-            this.btbSubirImagen.UseVisualStyleBackColor = true;
-            this.btbSubirImagen.Click += new System.EventHandler(this.btbSubirImagen_Click);
             // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // lblVendedor
-            // 
-            this.lblVendedor.AutoSize = true;
-            this.lblVendedor.Location = new System.Drawing.Point(35, 289);
-            this.lblVendedor.Name = "lblVendedor";
-            this.lblVendedor.Size = new System.Drawing.Size(53, 13);
-            this.lblVendedor.TabIndex = 13;
-            this.lblVendedor.Text = "Vendedor";
-            // 
-            // txbVendedor
-            // 
-            this.txbVendedor.Location = new System.Drawing.Point(147, 282);
-            this.txbVendedor.Name = "txbVendedor";
-            this.txbVendedor.Size = new System.Drawing.Size(166, 20);
-            this.txbVendedor.TabIndex = 9;
-            this.txbVendedor.TextChanged += new System.EventHandler(this.txbVendedor_TextChanged);
-            // 
-            // cbxTipoVehiculo
-            // 
-            this.cbxTipoVehiculo.FormattingEnabled = true;
-            this.cbxTipoVehiculo.Location = new System.Drawing.Point(147, 47);
-            this.cbxTipoVehiculo.Name = "cbxTipoVehiculo";
-            this.cbxTipoVehiculo.Size = new System.Drawing.Size(166, 21);
-            this.cbxTipoVehiculo.TabIndex = 0;
-            // 
-            // cbxLinea
-            // 
-            this.cbxLinea.FormattingEnabled = true;
-            this.cbxLinea.Location = new System.Drawing.Point(147, 99);
-            this.cbxLinea.Name = "cbxLinea";
-            this.cbxLinea.Size = new System.Drawing.Size(166, 21);
-            this.cbxLinea.TabIndex = 2;
-            // 
-            // cbxCiudad
-            // 
-            this.cbxCiudad.FormattingEnabled = true;
-            this.cbxCiudad.Location = new System.Drawing.Point(147, 229);
-            this.cbxCiudad.Name = "cbxCiudad";
-            this.cbxCiudad.Size = new System.Drawing.Size(166, 21);
-            this.cbxCiudad.TabIndex = 7;
-            // 
-            // txbMotor
-            // 
-            this.txbMotor.Location = new System.Drawing.Point(147, 204);
-            this.txbMotor.Name = "txbMotor";
-            this.txbMotor.Size = new System.Drawing.Size(166, 20);
-            this.txbMotor.TabIndex = 6;
-            // 
-            // lblDescripcion
-            // 
-            this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(35, 315);
-            this.lblDescripcion.Name = "lblDescripcion";
-            this.lblDescripcion.Size = new System.Drawing.Size(63, 13);
-            this.lblDescripcion.TabIndex = 16;
-            this.lblDescripcion.Text = "Descripcion";
-            // 
-            // txbDescripcion
-            // 
-            this.txbDescripcion.Location = new System.Drawing.Point(147, 308);
-            this.txbDescripcion.Multiline = true;
-            this.txbDescripcion.Name = "txbDescripcion";
-            this.txbDescripcion.Size = new System.Drawing.Size(166, 83);
-            this.txbDescripcion.TabIndex = 10;
-            // 
             // txbUrl
             // 
-            this.txbUrl.Location = new System.Drawing.Point(38, 578);
+            this.txbUrl.Location = new System.Drawing.Point(780, 507);
             this.txbUrl.Name = "txbUrl";
-            this.txbUrl.Size = new System.Drawing.Size(275, 20);
+            this.txbUrl.Size = new System.Drawing.Size(10, 20);
             this.txbUrl.TabIndex = 17;
             this.txbUrl.Visible = false;
+            // 
+            // lblEncabezado
+            // 
+            this.lblEncabezado.AutoSize = true;
+            this.lblEncabezado.Font = new System.Drawing.Font("Nirmala UI", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEncabezado.ForeColor = System.Drawing.Color.White;
+            this.lblEncabezado.Location = new System.Drawing.Point(254, 27);
+            this.lblEncabezado.Name = "lblEncabezado";
+            this.lblEncabezado.Size = new System.Drawing.Size(270, 37);
+            this.lblEncabezado.TabIndex = 33;
+            this.lblEncabezado.Text = "Registro de Vehiculos";
+            // 
+            // txtTipoVehiculo
+            // 
+            this.txtTipoVehiculo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTipoVehiculo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTipoVehiculo.ForeColor = System.Drawing.Color.White;
+            this.txtTipoVehiculo.HintForeColor = System.Drawing.Color.White;
+            this.txtTipoVehiculo.HintText = "Tipo Vehiculo";
+            this.txtTipoVehiculo.isPassword = false;
+            this.txtTipoVehiculo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtTipoVehiculo.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtTipoVehiculo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtTipoVehiculo.LineThickness = 3;
+            this.txtTipoVehiculo.Location = new System.Drawing.Point(11, 100);
+            this.txtTipoVehiculo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTipoVehiculo.Name = "txtTipoVehiculo";
+            this.txtTipoVehiculo.Size = new System.Drawing.Size(155, 31);
+            this.txtTipoVehiculo.TabIndex = 0;
+            this.txtTipoVehiculo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtLinea
+            // 
+            this.txtLinea.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtLinea.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLinea.ForeColor = System.Drawing.Color.White;
+            this.txtLinea.HintForeColor = System.Drawing.Color.White;
+            this.txtLinea.HintText = "Linea";
+            this.txtLinea.isPassword = false;
+            this.txtLinea.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtLinea.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtLinea.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtLinea.LineThickness = 3;
+            this.txtLinea.Location = new System.Drawing.Point(11, 152);
+            this.txtLinea.Margin = new System.Windows.Forms.Padding(4);
+            this.txtLinea.Name = "txtLinea";
+            this.txtLinea.Size = new System.Drawing.Size(155, 31);
+            this.txtLinea.TabIndex = 2;
+            this.txtLinea.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtPlaca
+            // 
+            this.txtPlaca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPlaca.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPlaca.ForeColor = System.Drawing.Color.White;
+            this.txtPlaca.HintForeColor = System.Drawing.Color.White;
+            this.txtPlaca.HintText = "Placa";
+            this.txtPlaca.isPassword = false;
+            this.txtPlaca.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtPlaca.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtPlaca.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtPlaca.LineThickness = 3;
+            this.txtPlaca.Location = new System.Drawing.Point(11, 204);
+            this.txtPlaca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPlaca.Name = "txtPlaca";
+            this.txtPlaca.Size = new System.Drawing.Size(155, 31);
+            this.txtPlaca.TabIndex = 4;
+            this.txtPlaca.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtCilindraje
+            // 
+            this.txtCilindraje.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCilindraje.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCilindraje.ForeColor = System.Drawing.Color.White;
+            this.txtCilindraje.HintForeColor = System.Drawing.Color.White;
+            this.txtCilindraje.HintText = "Cilindraje";
+            this.txtCilindraje.isPassword = false;
+            this.txtCilindraje.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtCilindraje.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtCilindraje.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtCilindraje.LineThickness = 3;
+            this.txtCilindraje.Location = new System.Drawing.Point(11, 256);
+            this.txtCilindraje.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCilindraje.Name = "txtCilindraje";
+            this.txtCilindraje.Size = new System.Drawing.Size(155, 31);
+            this.txtCilindraje.TabIndex = 6;
+            this.txtCilindraje.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtMarca
+            // 
+            this.txtMarca.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtMarca.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtMarca.ForeColor = System.Drawing.Color.White;
+            this.txtMarca.HintForeColor = System.Drawing.Color.White;
+            this.txtMarca.HintText = "Marca";
+            this.txtMarca.isPassword = false;
+            this.txtMarca.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtMarca.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtMarca.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtMarca.LineThickness = 3;
+            this.txtMarca.Location = new System.Drawing.Point(190, 100);
+            this.txtMarca.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMarca.Name = "txtMarca";
+            this.txtMarca.Size = new System.Drawing.Size(155, 31);
+            this.txtMarca.TabIndex = 1;
+            this.txtMarca.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtModelo
+            // 
+            this.txtModelo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtModelo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtModelo.ForeColor = System.Drawing.Color.White;
+            this.txtModelo.HintForeColor = System.Drawing.Color.White;
+            this.txtModelo.HintText = "Modelo";
+            this.txtModelo.isPassword = false;
+            this.txtModelo.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtModelo.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtModelo.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtModelo.LineThickness = 3;
+            this.txtModelo.Location = new System.Drawing.Point(190, 152);
+            this.txtModelo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtModelo.Name = "txtModelo";
+            this.txtModelo.Size = new System.Drawing.Size(155, 31);
+            this.txtModelo.TabIndex = 3;
+            this.txtModelo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtKilometraje
+            // 
+            this.txtKilometraje.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtKilometraje.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtKilometraje.ForeColor = System.Drawing.Color.White;
+            this.txtKilometraje.HintForeColor = System.Drawing.Color.White;
+            this.txtKilometraje.HintText = "Kilometraje";
+            this.txtKilometraje.isPassword = false;
+            this.txtKilometraje.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtKilometraje.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtKilometraje.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtKilometraje.LineThickness = 3;
+            this.txtKilometraje.Location = new System.Drawing.Point(190, 204);
+            this.txtKilometraje.Margin = new System.Windows.Forms.Padding(4);
+            this.txtKilometraje.Name = "txtKilometraje";
+            this.txtKilometraje.Size = new System.Drawing.Size(155, 31);
+            this.txtKilometraje.TabIndex = 5;
+            this.txtKilometraje.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtCiudad
+            // 
+            this.txtCiudad.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtCiudad.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCiudad.ForeColor = System.Drawing.Color.White;
+            this.txtCiudad.HintForeColor = System.Drawing.Color.White;
+            this.txtCiudad.HintText = "Ciudad";
+            this.txtCiudad.isPassword = false;
+            this.txtCiudad.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtCiudad.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtCiudad.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtCiudad.LineThickness = 3;
+            this.txtCiudad.Location = new System.Drawing.Point(190, 257);
+            this.txtCiudad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtCiudad.Name = "txtCiudad";
+            this.txtCiudad.Size = new System.Drawing.Size(155, 31);
+            this.txtCiudad.TabIndex = 7;
+            this.txtCiudad.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtVendedor
+            // 
+            this.txtVendedor.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtVendedor.Enabled = false;
+            this.txtVendedor.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtVendedor.ForeColor = System.Drawing.Color.White;
+            this.txtVendedor.HintForeColor = System.Drawing.Color.White;
+            this.txtVendedor.HintText = "Vendedor";
+            this.txtVendedor.isPassword = false;
+            this.txtVendedor.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtVendedor.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtVendedor.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtVendedor.LineThickness = 3;
+            this.txtVendedor.Location = new System.Drawing.Point(11, 309);
+            this.txtVendedor.Margin = new System.Windows.Forms.Padding(4);
+            this.txtVendedor.Name = "txtVendedor";
+            this.txtVendedor.Size = new System.Drawing.Size(333, 31);
+            this.txtVendedor.TabIndex = 100;
+            this.txtVendedor.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtPrecio
+            // 
+            this.txtPrecio.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPrecio.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPrecio.ForeColor = System.Drawing.Color.White;
+            this.txtPrecio.HintForeColor = System.Drawing.Color.White;
+            this.txtPrecio.HintText = "Precio";
+            this.txtPrecio.isPassword = false;
+            this.txtPrecio.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtPrecio.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtPrecio.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtPrecio.LineThickness = 3;
+            this.txtPrecio.Location = new System.Drawing.Point(11, 359);
+            this.txtPrecio.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPrecio.Name = "txtPrecio";
+            this.txtPrecio.Size = new System.Drawing.Size(333, 31);
+            this.txtPrecio.TabIndex = 8;
+            this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageActive = null;
+            this.btnExit.Location = new System.Drawing.Point(741, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(40, 34);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 45;
+            this.btnExit.TabStop = false;
+            this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btbSubirImagen
+            // 
+            this.btbSubirImagen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btbSubirImagen.BorderRadius = 0;
+            this.btbSubirImagen.ButtonText = "Subir Foto";
+            this.btbSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btbSubirImagen.DisabledColor = System.Drawing.Color.Gray;
+            this.btbSubirImagen.Iconcolor = System.Drawing.Color.Transparent;
+            this.btbSubirImagen.Iconimage = ((System.Drawing.Image)(resources.GetObject("btbSubirImagen.Iconimage")));
+            this.btbSubirImagen.Iconimage_right = null;
+            this.btbSubirImagen.Iconimage_right_Selected = null;
+            this.btbSubirImagen.Iconimage_Selected = null;
+            this.btbSubirImagen.IconMarginLeft = 0;
+            this.btbSubirImagen.IconMarginRight = 0;
+            this.btbSubirImagen.IconRightVisible = true;
+            this.btbSubirImagen.IconRightZoom = 0D;
+            this.btbSubirImagen.IconVisible = true;
+            this.btbSubirImagen.IconZoom = 48D;
+            this.btbSubirImagen.IsTab = false;
+            this.btbSubirImagen.Location = new System.Drawing.Point(675, 396);
+            this.btbSubirImagen.Name = "btbSubirImagen";
+            this.btbSubirImagen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.OnHoverTextColor = System.Drawing.Color.White;
+            this.btbSubirImagen.selected = false;
+            this.btbSubirImagen.Size = new System.Drawing.Size(106, 29);
+            this.btbSubirImagen.TabIndex = 10;
+            this.btbSubirImagen.Text = "Subir Foto";
+            this.btbSubirImagen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btbSubirImagen.Textcolor = System.Drawing.Color.White;
+            this.btbSubirImagen.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbSubirImagen.Click += new System.EventHandler(this.btbSubirImagen_Click_1);
+            // 
+            // btnPublicar
+            // 
+            this.btnPublicar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btnPublicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btnPublicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPublicar.BorderRadius = 0;
+            this.btnPublicar.ButtonText = "Publicar";
+            this.btnPublicar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPublicar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPublicar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPublicar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPublicar.Iconimage")));
+            this.btnPublicar.Iconimage_right = null;
+            this.btnPublicar.Iconimage_right_Selected = null;
+            this.btnPublicar.Iconimage_Selected = null;
+            this.btnPublicar.IconMarginLeft = 0;
+            this.btnPublicar.IconMarginRight = 0;
+            this.btnPublicar.IconRightVisible = true;
+            this.btnPublicar.IconRightZoom = 0D;
+            this.btnPublicar.IconVisible = true;
+            this.btnPublicar.IconZoom = 48D;
+            this.btnPublicar.IsTab = false;
+            this.btnPublicar.Location = new System.Drawing.Point(495, 471);
+            this.btnPublicar.Name = "btnPublicar";
+            this.btnPublicar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btnPublicar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btnPublicar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPublicar.selected = false;
+            this.btnPublicar.Size = new System.Drawing.Size(161, 42);
+            this.btnPublicar.TabIndex = 11;
+            this.btnPublicar.Text = "Publicar";
+            this.btnPublicar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPublicar.Textcolor = System.Drawing.Color.White;
+            this.btnPublicar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
+            // 
+            // txtAccesorios
+            // 
+            this.txtAccesorios.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAccesorios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccesorios.ForeColor = System.Drawing.Color.White;
+            this.txtAccesorios.HintForeColor = System.Drawing.Color.White;
+            this.txtAccesorios.HintText = "Accesorios";
+            this.txtAccesorios.isPassword = false;
+            this.txtAccesorios.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtAccesorios.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtAccesorios.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtAccesorios.LineThickness = 3;
+            this.txtAccesorios.Location = new System.Drawing.Point(11, 437);
+            this.txtAccesorios.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccesorios.Name = "txtAccesorios";
+            this.txtAccesorios.Size = new System.Drawing.Size(333, 89);
+            this.txtAccesorios.TabIndex = 9;
+            this.txtAccesorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // VehicleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 640);
-            this.Controls.Add(this.txbUrl);
-            this.Controls.Add(this.txbDescripcion);
-            this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.txbMotor);
-            this.Controls.Add(this.cbxCiudad);
-            this.Controls.Add(this.cbxLinea);
-            this.Controls.Add(this.cbxTipoVehiculo);
-            this.Controls.Add(this.txbVendedor);
-            this.Controls.Add(this.lblVendedor);
-            this.Controls.Add(this.btbSubirImagen);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.txbPrecio);
-            this.Controls.Add(this.txbKilometraje);
-            this.Controls.Add(this.txbPlaca);
-            this.Controls.Add(this.txbModelo);
-            this.Controls.Add(this.txbMarca);
-            this.Controls.Add(this.lblEncabezado);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(25)))), ((int)(((byte)(30)))));
+            this.ClientSize = new System.Drawing.Size(793, 539);
+            this.Controls.Add(this.txtAccesorios);
             this.Controls.Add(this.btnPublicar);
-            this.Controls.Add(this.lblCiudad);
-            this.Controls.Add(this.lblPrecio);
-            this.Controls.Add(this.lblMotor);
-            this.Controls.Add(this.lblKilometraje);
-            this.Controls.Add(this.lblPlaca);
-            this.Controls.Add(this.lblModelo);
-            this.Controls.Add(this.lblLinea);
-            this.Controls.Add(this.lblMarca);
-            this.Controls.Add(this.lblTipoVehiculo);
+            this.Controls.Add(this.btbSubirImagen);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.txtPrecio);
+            this.Controls.Add(this.txtVendedor);
+            this.Controls.Add(this.txtCiudad);
+            this.Controls.Add(this.txtKilometraje);
+            this.Controls.Add(this.txtModelo);
+            this.Controls.Add(this.txtMarca);
+            this.Controls.Add(this.txtCilindraje);
+            this.Controls.Add(this.txtPlaca);
+            this.Controls.Add(this.txtLinea);
+            this.Controls.Add(this.txtTipoVehiculo);
+            this.Controls.Add(this.lblEncabezado);
+            this.Controls.Add(this.txbUrl);
+            this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VehicleView";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Formulario";
-            this.Load += new System.EventHandler(this.Formulario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblTipoVehiculo;
-        private System.Windows.Forms.Label lblMarca;
-        private System.Windows.Forms.Label lblLinea;
-        private System.Windows.Forms.Label lblModelo;
-        private System.Windows.Forms.Label lblPrecio;
-        private System.Windows.Forms.Label lblMotor;
-        private System.Windows.Forms.Label lblKilometraje;
-        private System.Windows.Forms.Label lblPlaca;
-        private System.Windows.Forms.Label lblCiudad;
-        private System.Windows.Forms.Button btnPublicar;
-        private System.Windows.Forms.Label lblEncabezado;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Button btbSubirImagen;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Label lblVendedor;
-        public System.Windows.Forms.ComboBox cbxTipoVehiculo;
-        public System.Windows.Forms.TextBox txbMarca;
-        public System.Windows.Forms.TextBox txbKilometraje;
-        public System.Windows.Forms.TextBox txbPlaca;
-        public System.Windows.Forms.TextBox txbModelo;
-        public System.Windows.Forms.TextBox txbPrecio;
-        public System.Windows.Forms.TextBox txbVendedor;
-        public System.Windows.Forms.ComboBox cbxLinea;
-        public System.Windows.Forms.ComboBox cbxCiudad;
-        public System.Windows.Forms.TextBox txbMotor;
-        private System.Windows.Forms.Label lblDescripcion;
-        public System.Windows.Forms.TextBox txbDescripcion;
         private System.Windows.Forms.TextBox txbUrl;
+        private System.Windows.Forms.Label lblEncabezado;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtTipoVehiculo;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtLinea;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPlaca;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCilindraje;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtMarca;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtModelo;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtKilometraje;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtCiudad;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtVendedor;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecio;
+        private Bunifu.Framework.UI.BunifuImageButton btnExit;
+        private Bunifu.Framework.UI.BunifuFlatButton btbSubirImagen;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPublicar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtAccesorios;
     }
 }

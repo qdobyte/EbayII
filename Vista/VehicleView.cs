@@ -14,23 +14,18 @@ namespace Vista
 {
     public partial class VehicleView : System.Windows.Forms.Form
     {
-        public VehicleView()
+        public string UserName { get; set; }
+        public HomeView HomeView { get; set; }
+
+        public VehicleView(HomeView HomeView, string userName)
         {
             InitializeComponent();
             VehicleController vehicleController = new VehicleController();
-            this.txbVendedor.Text = vehicleController.NombreVendedor;
-            this.cbxTipoVehiculo.Items.AddRange(new object[] 
-            {"Automovil","Motocicleta"});
-            this.cbxLinea.Items.AddRange(new object[] { "Particular", "Comercial" });
-            this.cbxCiudad.Items.AddRange(new object[] { "Medellín", "Bogotá", "Cali", "Pereira" });
-            //this.txbVendedor.Text = 
+            this.HomeView = HomeView;
+            this.UserName = userName;
+            this.txtVendedor.Text = this.UserName;
         }
-        private void Formulario_Load(object sender, EventArgs e)
-        {
-            //string ruta = Application.StartupPath + "\\recursos\\SanderoRS.jpg";
-            //pictureBox1.ImageLocation = ruta;
-        }
-        private void btbSubirImagen_Click(object sender, EventArgs e)
+        private void btbSubirImagen_Click_1(object sender, EventArgs e)
         {
             try
             {
@@ -44,11 +39,6 @@ namespace Vista
             {
                 MessageBox.Show("La imágen no es valida " + ex);
             }
-        }
-        private void txbVendedor_TextChanged(object sender, EventArgs e)
-        {
-            //txbVendedor.Text = ???? 
-            
         }
         private void btnPublicar_Click(object sender, EventArgs e)
         {
@@ -67,25 +57,25 @@ namespace Vista
             string url = null;
             string Error = null;
 
-            vehiculo = cbxTipoVehiculo.Text;
-            marca = txbMarca.Text;
-            linea = cbxLinea.Text;
-            modelo = txbModelo.Text;
-            placa = txbPlaca.Text;
-            kilometraje = txbKilometraje.Text;
-            motor = txbMotor.Text;
-            ciudad = cbxCiudad.Text;
-            precio = txbPrecio.Text;
-            descripcion = txbDescripcion.Text;
+            vehiculo = txtTipoVehiculo.Text;
+            marca = txtMarca.Text;
+            linea = txtLinea.Text;
+            modelo = txtModelo.Text;
+            placa = txtPlaca.Text;
+            kilometraje = txtKilometraje.Text;
+            motor = txtCilindraje.Text;
+            ciudad = txtCiudad.Text;
+            precio = txtPrecio.Text;
+            descripcion = txtAccesorios.Text;
             url = txbUrl.Text;
-            vehicleController.NombreVendedor = txbVendedor.Text;
+            vehicleController.NombreVendedor = txtVendedor.Text;
 
-            bool registroExitoso = vehicleController.SetForm(vehiculo, marca, linea, modelo, placa, 
+            bool registroExitoso = vehicleController.SetForm(vehiculo, marca, linea, modelo, placa,
                 kilometraje, motor, ciudad, precio, url, descripcion, 1);
             if (registroExitoso)
             {
                 MessageBox.Show(vehicleController.Mensaje);
-                this.Close();
+                this.CloseVehicleForm();
             }
             else
             {
@@ -98,9 +88,9 @@ namespace Vista
                 if (e.KeyChar >= 48 && e.KeyChar <= 57 || e.KeyChar == 8 || e.KeyChar == 13)
                 {
                     e.Handled = false;
-                    if (e.KeyChar == 13 && (txbPrecio.Text.Trim() != ""))
+                    if (e.KeyChar == 13 && (txtPrecio.Text.Trim() != ""))
                     {
-                        
+
                     }
                 }
                 else
@@ -115,7 +105,7 @@ namespace Vista
                 if (e.KeyChar >= 48 && e.KeyChar <= 57 || e.KeyChar == 8 || e.KeyChar == 13)
                 {
                     e.Handled = false;
-                    if (e.KeyChar == 13 && (txbPrecio.Text.Trim() != ""))
+                    if (e.KeyChar == 13 && (txtPrecio.Text.Trim() != ""))
                     {
 
                     }
@@ -132,7 +122,7 @@ namespace Vista
                 if (e.KeyChar >= 48 && e.KeyChar <= 57 || e.KeyChar == 8 || e.KeyChar == 13)
                 {
                     e.Handled = false;
-                    if (e.KeyChar == 13 && (txbPrecio.Text.Trim() != ""))
+                    if (e.KeyChar == 13 && (txtPrecio.Text.Trim() != ""))
                     {
 
                     }
@@ -142,6 +132,16 @@ namespace Vista
                     e.Handled = true;
                 }
             }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.CloseVehicleForm();
+        }
+
+        private void CloseVehicleForm () {
+            this.Hide();
+            this.HomeView.Reload();
         }
     }
 }

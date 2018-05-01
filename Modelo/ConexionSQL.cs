@@ -27,8 +27,7 @@ namespace Model
             data = new DataTable();
         }
         #endregion
-
-        #region methods
+        #region ExecuteStoreProcedure
         private void OpenConnection()
         {
             this.sqlConnection.Open();
