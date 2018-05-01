@@ -33,6 +33,10 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.txbUrl = new System.Windows.Forms.TextBox();
             this.lblEncabezado = new System.Windows.Forms.Label();
+            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
+            this.btbSubirImagen = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnPublicar = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.txtAccesorios = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtTipoVehiculo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtLinea = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPlaca = new Bunifu.Framework.UI.BunifuMaterialTextbox();
@@ -43,10 +47,6 @@
             this.txtCiudad = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtVendedor = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txtPrecio = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            this.btbSubirImagen = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnPublicar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.txtAccesorios = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             this.SuspendLayout();
@@ -58,7 +58,7 @@
             this.pictureBox1.Location = new System.Drawing.Point(401, 87);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(380, 303);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 11;
             this.pictureBox1.TabStop = false;
             // 
@@ -84,6 +84,109 @@
             this.lblEncabezado.Size = new System.Drawing.Size(270, 37);
             this.lblEncabezado.TabIndex = 33;
             this.lblEncabezado.Text = "Registro de Vehiculos";
+            // 
+            // btnExit
+            // 
+            this.btnExit.BackColor = System.Drawing.Color.Transparent;
+            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
+            this.btnExit.ImageActive = null;
+            this.btnExit.Location = new System.Drawing.Point(741, 12);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(40, 34);
+            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnExit.TabIndex = 45;
+            this.btnExit.TabStop = false;
+            this.btnExit.Zoom = 10;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
+            // btbSubirImagen
+            // 
+            this.btbSubirImagen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btbSubirImagen.BorderRadius = 0;
+            this.btbSubirImagen.ButtonText = "Subir Foto";
+            this.btbSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btbSubirImagen.DisabledColor = System.Drawing.Color.Gray;
+            this.btbSubirImagen.Iconcolor = System.Drawing.Color.Transparent;
+            this.btbSubirImagen.Iconimage = ((System.Drawing.Image)(resources.GetObject("btbSubirImagen.Iconimage")));
+            this.btbSubirImagen.Iconimage_right = null;
+            this.btbSubirImagen.Iconimage_right_Selected = null;
+            this.btbSubirImagen.Iconimage_Selected = null;
+            this.btbSubirImagen.IconMarginLeft = 0;
+            this.btbSubirImagen.IconMarginRight = 0;
+            this.btbSubirImagen.IconRightVisible = true;
+            this.btbSubirImagen.IconRightZoom = 0D;
+            this.btbSubirImagen.IconVisible = true;
+            this.btbSubirImagen.IconZoom = 48D;
+            this.btbSubirImagen.IsTab = false;
+            this.btbSubirImagen.Location = new System.Drawing.Point(675, 396);
+            this.btbSubirImagen.Name = "btbSubirImagen";
+            this.btbSubirImagen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btbSubirImagen.OnHoverTextColor = System.Drawing.Color.White;
+            this.btbSubirImagen.selected = false;
+            this.btbSubirImagen.Size = new System.Drawing.Size(106, 29);
+            this.btbSubirImagen.TabIndex = 10;
+            this.btbSubirImagen.Text = "Subir Foto";
+            this.btbSubirImagen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btbSubirImagen.Textcolor = System.Drawing.Color.White;
+            this.btbSubirImagen.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btbSubirImagen.Click += new System.EventHandler(this.btbSubirImagen_Click_1);
+            // 
+            // btnPublicar
+            // 
+            this.btnPublicar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btnPublicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btnPublicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnPublicar.BorderRadius = 0;
+            this.btnPublicar.ButtonText = "Publicar";
+            this.btnPublicar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPublicar.DisabledColor = System.Drawing.Color.Gray;
+            this.btnPublicar.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnPublicar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPublicar.Iconimage")));
+            this.btnPublicar.Iconimage_right = null;
+            this.btnPublicar.Iconimage_right_Selected = null;
+            this.btnPublicar.Iconimage_Selected = null;
+            this.btnPublicar.IconMarginLeft = 0;
+            this.btnPublicar.IconMarginRight = 0;
+            this.btnPublicar.IconRightVisible = true;
+            this.btnPublicar.IconRightZoom = 0D;
+            this.btnPublicar.IconVisible = true;
+            this.btnPublicar.IconZoom = 48D;
+            this.btnPublicar.IsTab = false;
+            this.btnPublicar.Location = new System.Drawing.Point(495, 471);
+            this.btnPublicar.Name = "btnPublicar";
+            this.btnPublicar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.btnPublicar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.btnPublicar.OnHoverTextColor = System.Drawing.Color.White;
+            this.btnPublicar.selected = false;
+            this.btnPublicar.Size = new System.Drawing.Size(161, 42);
+            this.btnPublicar.TabIndex = 11;
+            this.btnPublicar.Text = "Publicar";
+            this.btnPublicar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPublicar.Textcolor = System.Drawing.Color.White;
+            this.btnPublicar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
+            // 
+            // txtAccesorios
+            // 
+            this.txtAccesorios.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtAccesorios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtAccesorios.ForeColor = System.Drawing.Color.White;
+            this.txtAccesorios.HintForeColor = System.Drawing.Color.White;
+            this.txtAccesorios.HintText = "Accesorios";
+            this.txtAccesorios.isPassword = false;
+            this.txtAccesorios.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtAccesorios.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.txtAccesorios.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
+            this.txtAccesorios.LineThickness = 3;
+            this.txtAccesorios.Location = new System.Drawing.Point(11, 437);
+            this.txtAccesorios.Margin = new System.Windows.Forms.Padding(4);
+            this.txtAccesorios.Name = "txtAccesorios";
+            this.txtAccesorios.Size = new System.Drawing.Size(333, 89);
+            this.txtAccesorios.TabIndex = 9;
+            this.txtAccesorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // txtTipoVehiculo
             // 
@@ -276,109 +379,6 @@
             this.txtPrecio.TabIndex = 8;
             this.txtPrecio.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // btnExit
-            // 
-            this.btnExit.BackColor = System.Drawing.Color.Transparent;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
-            this.btnExit.ImageActive = null;
-            this.btnExit.Location = new System.Drawing.Point(741, 12);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(40, 34);
-            this.btnExit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnExit.TabIndex = 45;
-            this.btnExit.TabStop = false;
-            this.btnExit.Zoom = 10;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btbSubirImagen
-            // 
-            this.btbSubirImagen.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
-            this.btbSubirImagen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.btbSubirImagen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btbSubirImagen.BorderRadius = 0;
-            this.btbSubirImagen.ButtonText = "Subir Foto";
-            this.btbSubirImagen.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btbSubirImagen.DisabledColor = System.Drawing.Color.Gray;
-            this.btbSubirImagen.Iconcolor = System.Drawing.Color.Transparent;
-            this.btbSubirImagen.Iconimage = ((System.Drawing.Image)(resources.GetObject("btbSubirImagen.Iconimage")));
-            this.btbSubirImagen.Iconimage_right = null;
-            this.btbSubirImagen.Iconimage_right_Selected = null;
-            this.btbSubirImagen.Iconimage_Selected = null;
-            this.btbSubirImagen.IconMarginLeft = 0;
-            this.btbSubirImagen.IconMarginRight = 0;
-            this.btbSubirImagen.IconRightVisible = true;
-            this.btbSubirImagen.IconRightZoom = 0D;
-            this.btbSubirImagen.IconVisible = true;
-            this.btbSubirImagen.IconZoom = 48D;
-            this.btbSubirImagen.IsTab = false;
-            this.btbSubirImagen.Location = new System.Drawing.Point(675, 396);
-            this.btbSubirImagen.Name = "btbSubirImagen";
-            this.btbSubirImagen.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.btbSubirImagen.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
-            this.btbSubirImagen.OnHoverTextColor = System.Drawing.Color.White;
-            this.btbSubirImagen.selected = false;
-            this.btbSubirImagen.Size = new System.Drawing.Size(106, 29);
-            this.btbSubirImagen.TabIndex = 10;
-            this.btbSubirImagen.Text = "Subir Foto";
-            this.btbSubirImagen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btbSubirImagen.Textcolor = System.Drawing.Color.White;
-            this.btbSubirImagen.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btbSubirImagen.Click += new System.EventHandler(this.btbSubirImagen_Click_1);
-            // 
-            // btnPublicar
-            // 
-            this.btnPublicar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
-            this.btnPublicar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.btnPublicar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnPublicar.BorderRadius = 0;
-            this.btnPublicar.ButtonText = "Publicar";
-            this.btnPublicar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPublicar.DisabledColor = System.Drawing.Color.Gray;
-            this.btnPublicar.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnPublicar.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnPublicar.Iconimage")));
-            this.btnPublicar.Iconimage_right = null;
-            this.btnPublicar.Iconimage_right_Selected = null;
-            this.btnPublicar.Iconimage_Selected = null;
-            this.btnPublicar.IconMarginLeft = 0;
-            this.btnPublicar.IconMarginRight = 0;
-            this.btnPublicar.IconRightVisible = true;
-            this.btnPublicar.IconRightZoom = 0D;
-            this.btnPublicar.IconVisible = true;
-            this.btnPublicar.IconZoom = 48D;
-            this.btnPublicar.IsTab = false;
-            this.btnPublicar.Location = new System.Drawing.Point(495, 471);
-            this.btnPublicar.Name = "btnPublicar";
-            this.btnPublicar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.btnPublicar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
-            this.btnPublicar.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnPublicar.selected = false;
-            this.btnPublicar.Size = new System.Drawing.Size(161, 42);
-            this.btnPublicar.TabIndex = 11;
-            this.btnPublicar.Text = "Publicar";
-            this.btnPublicar.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPublicar.Textcolor = System.Drawing.Color.White;
-            this.btnPublicar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPublicar.Click += new System.EventHandler(this.btnPublicar_Click);
-            // 
-            // txtAccesorios
-            // 
-            this.txtAccesorios.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtAccesorios.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtAccesorios.ForeColor = System.Drawing.Color.White;
-            this.txtAccesorios.HintForeColor = System.Drawing.Color.White;
-            this.txtAccesorios.HintText = "Accesorios";
-            this.txtAccesorios.isPassword = false;
-            this.txtAccesorios.LineFocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
-            this.txtAccesorios.LineIdleColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
-            this.txtAccesorios.LineMouseHoverColor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
-            this.txtAccesorios.LineThickness = 3;
-            this.txtAccesorios.Location = new System.Drawing.Point(11, 437);
-            this.txtAccesorios.Margin = new System.Windows.Forms.Padding(4);
-            this.txtAccesorios.Name = "txtAccesorios";
-            this.txtAccesorios.Size = new System.Drawing.Size(333, 89);
-            this.txtAccesorios.TabIndex = 9;
-            this.txtAccesorios.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // VehicleView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -419,6 +419,10 @@
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.TextBox txbUrl;
         private System.Windows.Forms.Label lblEncabezado;
+        private Bunifu.Framework.UI.BunifuImageButton btnExit;
+        private Bunifu.Framework.UI.BunifuFlatButton btbSubirImagen;
+        private Bunifu.Framework.UI.BunifuFlatButton btnPublicar;
+        private Bunifu.Framework.UI.BunifuMaterialTextbox txtAccesorios;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtTipoVehiculo;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtLinea;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPlaca;
@@ -429,9 +433,5 @@
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtCiudad;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtVendedor;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txtPrecio;
-        private Bunifu.Framework.UI.BunifuImageButton btnExit;
-        private Bunifu.Framework.UI.BunifuFlatButton btbSubirImagen;
-        private Bunifu.Framework.UI.BunifuFlatButton btnPublicar;
-        private Bunifu.Framework.UI.BunifuMaterialTextbox txtAccesorios;
     }
 }

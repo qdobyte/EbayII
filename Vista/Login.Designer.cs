@@ -33,15 +33,15 @@
             this.txbUsuarioByLogin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txbContrasenaByLogin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnIngresar = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.btnExit = new Bunifu.Framework.UI.BunifuImageButton();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // lblError
@@ -90,7 +90,6 @@
             this.txbContrasenaByLogin.TabIndex = 7;
             this.txbContrasenaByLogin.Text = "Contraseña";
             this.txbContrasenaByLogin.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            this.txbContrasenaByLogin.OnValueChanged += new System.EventHandler(this.txbContrasenaByLogin_OnValueChanged);
             // 
             // btnIngresar
             // 
@@ -129,19 +128,9 @@
             this.btnIngresar.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIngresar.Click += new System.EventHandler(this.btnIngresar_Click);
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Image = global::Vista.Properties.Resources.icons8_Lock_104px;
-            this.pictureBox3.Location = new System.Drawing.Point(17, 277);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(29, 33);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 8;
-            this.pictureBox3.TabStop = false;
-            // 
             // pictureBox2
             // 
-            this.pictureBox2.Image = global::Vista.Properties.Resources.icons8_User_96px_11;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
             this.pictureBox2.Location = new System.Drawing.Point(17, 229);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(29, 31);
@@ -184,6 +173,16 @@
             this.btnExit.Zoom = 10;
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(17, 279);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(29, 31);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,8 +192,8 @@
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnIngresar);
-            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.txbContrasenaByLogin);
+            this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txbUsuarioByLogin);
             this.Controls.Add(this.pictureBox1);
@@ -204,10 +203,10 @@
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -218,11 +217,11 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txbUsuarioByLogin;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.PictureBox pictureBox3;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txbContrasenaByLogin;
         private Bunifu.Framework.UI.BunifuFlatButton btnIngresar;
         private System.Windows.Forms.Label label1;
         private Bunifu.Framework.UI.BunifuImageButton btnExit;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }
 

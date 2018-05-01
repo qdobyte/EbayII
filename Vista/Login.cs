@@ -32,7 +32,7 @@ namespace Vista
             if (consultaExitosa)
             {
                 this.Hide();
-                HomeView homeView = new HomeView();
+                HomeView homeView = new HomeView(this);
                 homeView.UserName = loginController.Nombre;
                 homeView.Show();
             }

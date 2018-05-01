@@ -13,9 +13,11 @@ namespace Vista
     public partial class HomeView : System.Windows.Forms.Form
     {
         public string UserName { get; set; }
-        public HomeView()
+        public Login login { get; set; }
+        public HomeView(Login login)
         {
             InitializeComponent();
+            this.login = login;
         }
 
         private void HomeView_Load(object sender, EventArgs e)
@@ -35,6 +37,24 @@ namespace Vista
         public void Reload() {
             this.Show();
             //Recargue en la base de datos
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void bunifuFlatButton1_Click(object sender, EventArgs e)
+        {
+            this.login = null;
+            Login login = new Login();
+            login.Show();
+            this.Hide();
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }
