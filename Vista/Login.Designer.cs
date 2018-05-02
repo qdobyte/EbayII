@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
-            this.lblError = new System.Windows.Forms.Label();
             this.txbUsuarioByLogin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.txbContrasenaByLogin = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.btnIngresar = new Bunifu.Framework.UI.BunifuFlatButton();
@@ -43,14 +42,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.btnExit)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // lblError
-            // 
-            this.lblError.AutoSize = true;
-            this.lblError.Location = new System.Drawing.Point(93, 465);
-            this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 13);
-            this.lblError.TabIndex = 3;
             // 
             // txbUsuarioByLogin
             // 
@@ -93,7 +84,7 @@
             // 
             // btnIngresar
             // 
-            this.btnIngresar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(46)))), ((int)(((byte)(139)))), ((int)(((byte)(87)))));
+            this.btnIngresar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(205)))), ((int)(((byte)(81)))), ((int)(((byte)(0)))));
             this.btnIngresar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
             this.btnIngresar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnIngresar.BorderRadius = 0;
@@ -197,7 +188,6 @@
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.txbUsuarioByLogin);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.lblError);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Login";
@@ -213,7 +203,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.PictureBox pictureBox1;
         private Bunifu.Framework.UI.BunifuMaterialTextbox txbUsuarioByLogin;
         private System.Windows.Forms.PictureBox pictureBox2;

@@ -37,7 +37,8 @@ namespace Vista
             }
             catch (Exception ex)
             {
-                MessageBox.Show("La imágen no es valida " + ex);
+                MessageView messageView = new MessageView("La imágen no es valida " + ex);
+                messageView.Show();
             }
         }
         private void btnPublicar_Click(object sender, EventArgs e)
@@ -74,7 +75,8 @@ namespace Vista
                 kilometraje, motor, ciudad, precio, url, descripcion, 1);
             if (registroExitoso)
             {
-                MessageBox.Show(vehicleController.Mensaje);
+                MessageView messageView = new MessageView(vehicleController.Mensaje);
+                messageView.Show();
                 this.CloseVehicleForm();
             }
             else

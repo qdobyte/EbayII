@@ -18,6 +18,11 @@ namespace Vista
         {
             InitializeComponent();
             this.login = login;
+            int row = dtgVehiclesList.Rows.Add();
+            dtgVehiclesList.Rows[row].Cells[0].Value = Image.FromFile("C:\\Users\\QdoByte\\source\\repos\\Ebay\\Recursos\\SanderoRS.jpg");
+            dtgVehiclesList.Rows[row].Cells[1].Value = "$40.000.000";
+            dtgVehiclesList.Rows[row].Cells[2].Value = "2017";
+            dtgVehiclesList.Rows[row].Cells[3].Value = "4.000";
         }
 
         private void HomeView_Load(object sender, EventArgs e)

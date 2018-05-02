@@ -50,6 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MessageView.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MessageView.Designer.cs">
+      <DependentUpon>MessageView.cs</DependentUpon>
+    </Compile>
     <Compile Include="VehicleView.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MessageView.resx">
+      <DependentUpon>MessageView.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="VehicleView.resx">
       <DependentUpon>VehicleView.cs</DependentUpon>
     </EmbeddedResource>

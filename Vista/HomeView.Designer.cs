@@ -45,6 +45,10 @@
             this.btnVender = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.image = new System.Windows.Forms.DataGridViewImageColumn();
+            this.model = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.km = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.price = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dtgVehiclesList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -54,22 +58,28 @@
             // 
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.dtgVehiclesList.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgVehiclesList.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.dtgVehiclesList.BackgroundColor = System.Drawing.Color.Gainsboro;
             this.dtgVehiclesList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dtgVehiclesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Century Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dtgVehiclesList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dtgVehiclesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgVehiclesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.image,
+            this.model,
+            this.km,
+            this.price});
             this.dtgVehiclesList.DoubleBuffered = true;
             this.dtgVehiclesList.EnableHeadersVisualStyles = false;
-            this.dtgVehiclesList.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dtgVehiclesList.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dtgVehiclesList.HeaderBgColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(125)))), ((int)(((byte)(0)))));
+            this.dtgVehiclesList.HeaderForeColor = System.Drawing.Color.White;
             this.dtgVehiclesList.Location = new System.Drawing.Point(12, 136);
             this.dtgVehiclesList.Name = "dtgVehiclesList";
             this.dtgVehiclesList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -307,6 +317,36 @@
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
+            // image
+            // 
+            this.image.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.image.Frozen = true;
+            this.image.HeaderText = "Imagen";
+            this.image.Name = "image";
+            this.image.ReadOnly = true;
+            this.image.Width = 57;
+            // 
+            // model
+            // 
+            this.model.Frozen = true;
+            this.model.HeaderText = "Modelo";
+            this.model.Name = "model";
+            this.model.ReadOnly = true;
+            // 
+            // km
+            // 
+            this.km.Frozen = true;
+            this.km.HeaderText = "Kilometraje";
+            this.km.Name = "km";
+            this.km.ReadOnly = true;
+            // 
+            // price
+            // 
+            this.price.Frozen = true;
+            this.price.HeaderText = "Precio";
+            this.price.Name = "price";
+            this.price.ReadOnly = true;
+            // 
             // HomeView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -348,5 +388,9 @@
         private Bunifu.Framework.UI.BunifuCheckbox bunifuCheckbox1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
+        private System.Windows.Forms.DataGridViewImageColumn image;
+        private System.Windows.Forms.DataGridViewTextBoxColumn model;
+        private System.Windows.Forms.DataGridViewTextBoxColumn km;
+        private System.Windows.Forms.DataGridViewTextBoxColumn price;
     }
 }

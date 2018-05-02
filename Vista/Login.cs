@@ -38,7 +38,8 @@ namespace Vista
             }
             else
             {
-                lblError.Text = loginController.Error;
+                MessageView messageView = new MessageView(loginController.Error);
+                messageView.Show();
                 txbUsuarioByLogin.Text = "";
                 txbContrasenaByLogin.Text = "";
             }
